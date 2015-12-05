@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>fixed table demo</title>
+	<style type="text/css">
+	/*--reset--*/
+	* { padding:0; margin:0; }
+	h1 { font-size: 24px; line-height: 1.5; text-align: center; margin:20px; }
+	table {border-collapse:collapse; border-spacing:0;}
+	/*--fix table wrap--*/
+	.fix-table-wrap { width: 1000px; height: 400px; margin:0 auto; overflow:auto; border:solid 1px #ddd; }
+	.rl-fix-table { text-align: center; white-space: nowrap;}
+	.rl-fix-table th {font-weight: bold; background-color: #e6e6e6; line-height: 30px; padding:0 12px; }
+	.fix-hd { position: relative; top: 0; z-index: 10 }
+	.rl-fix-table td { line-height: 30px; padding:2px 12px; }
+	.rl-fix-table tbody tr:nth-child(even) { background-color: #f6f6f6; border-left-color: #f6f6f6; }
+	.rl-fix-table tbody tr:hover,.rl-fix-table tbody tr:hover .fix-col,.rl-fix-table tbody tr:nth-child(even):hover .fix-col { background-color: #fffbf6; border-left-color: #f48400 }
+	.fix-col { position: relative; left: 0; z-index: 10; background-color: #fff }
+	.rl-fix-table tbody tr:nth-child(even) .fix-col { background-color: #f6f6f6 }
+	.fix-hd.fix-col { z-index: 20; }
+	</style>
+</head>
+
+<body>
+<h1>锁定表头与列</h1>
+<!-- S: fix table wrap -->
+<div class="fix-table-wrap">
+	<table class="rl-fix-table">
+		<thead>
+			<tr>
+				<th class="fix-hd fix-col">第1列</th>
+				<th class="fix-hd">第2列</th>
+				<th class="fix-hd">第3列</th>
+				<th class="fix-hd">第4列</th>
+				<th class="fix-hd">第5列</th>
+				<th class="fix-hd">第6列</th>
+				<th class="fix-hd">第7列</th>
+				<th class="fix-hd">第8列</th>
+				<th class="fix-hd">第9列</th>
+				<th class="fix-hd">第10列</th>
+				<th class="fix-hd">第11列</th>
+				<th class="fix-hd">第12列</th>
+				<th class="fix-hd">第13列</th>
+				<th class="fix-hd">第14列</th>
+				<th class="fix-hd">第15列</th>
+				<th class="fix-hd">第16列</th>
+				<th class="fix-hd">第17列</th>
+				<th class="fix-hd">第18列</th>
+				<th class="fix-hd">第19列</th>
+				<th class="fix-hd">第20列</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="fix-col">111111</td>
+				<td>222222</td>
+				<td>333333</td>
+				<td>444444</td>
+				<td>555555</td>
+				<td>666666</td>
+				<td>777777</td>
+				<td>888888</td>
+				<td>999999</td>
+				<td>101010</td>
+				<td>111111</td>
+				<td>121212</td>
+				<td>131313</td>
+				<td>141414</td>
+				<td>151515</td>
+				<td>161616</td>
+				<td>171717</td>
+				<td>181818</td>
+				<td>191919</td>
+				<td>202020</td>
+			</tr>
+			<tr>
+				<td class="fix-col">111111</td>
+				<td>222222</td>
+				<td>333333</td>
+				<td>444444</td>
+				<td>555555</td>
+				<td>666666</td>
+				<td>777777</td>
+				<td>888888</td>
+				<td>999999</td>
+				<td>101010</td>
+				<td>111111</td>
+				<td>121212</td>
+				<td>131313</td>
+				<td>141414</td>
+				<td>151515</td>
+				<td>161616</td>
+				<td>171717</td>
+				<td>181818</td>
+				<td>191919</td>
+				<td>202020</td>
+			</tr>
+			<tr>
+				<td class="fix-col">111111</td>
+				<td>222222</td>
+				<td>333333</td>
+				<td>444444</td>
+				<td>555555</td>
+				<td>666666</td>
+				<td>777777</td>
+				<td>888888</td>
+				<td>999999</td>
+				<td>101010</td>
+				<td>111111</td>
+				<td>121212</td>
+				<td>131313</td>
+				<td>141414</td>
+				<td>151515</td>
+				<td>161616</td>
+				<td>171717</td>
+				<td>181818</td>
+				<td>191919</td>
+				<td>202020</td>
+			</tr>
+			<tr>
+				<td class="fix-col">111111</td>
+				<td>222222</td>
+				<td>333333</td>
+				<td>444444</td>
+				<td>555555</td>
+				<td>666666</td>
+				<td>777777</td>
+				<td>888888</td>
+				<td>999999</td>
+				<td>101010</td>
+				<td>111111</td>
+				<td>121212</td>
+				<td>131313</td>
+				<td>141414</td>
+				<td>151515</td>
+				<td>161616</td>
+				<td>171717</td>
+				<td>181818</td>
+				<td>191919</td>
+				<td>202020</td>
+			</tr>
+			<tr>
+				<td class="fix-col">111111</td>
+				<td>222222</td>
+				<td>333333</td>
+				<td>444444</td>
+				<td>555555</td>
+				<td>666666</td>
+				<td>777777</td>
+				<td>888888</td>
+				<td>999999</td>
+				<td>101010</td>
+				<td>111111</td>
+				<td>121212</td>
+				<td>131313</td>
+				<td>141414</td>
+				<td>151515</td>
+				<td>161616</td>
+				<td>171717</td>
+				<td>181818</td>
+				<td>191919</td>
+				<td>202020</td>
+			</tr>
+			<tr>
+				<td class="fix-col">111111</td>
+				<td>222222</td>
+				<td>333333</td>
+				<td>444444</td>
+				<td>555555</td>
+				<td>666666</td>
+				<td>777777</td>
+				<td>888888</td>
+				<td>999999</td>
+				<td>101010</td>
+				<td>111111</td>
+				<td>121212</td>
+				<td>131313</td>
+				<td>141414</td>
+				<td>151515</td>
+				<td>161616</td>
+				<td>171717</td>
+				<td>181818</td>
+				<td>191919</td>
+				<td>202020</td>
+			</tr>
+			<tr>
+				<td class="fix-col">111111</td>
+				<td>222222</td>
+				<td>333333</td>
+				<td>444444</td>
+				<td>555555</td>
+				<td>666666</td>
+				<td>777777</td>
+				<td>888888</td>
+				<td>999999</td>
+				<td>101010</td>
+				<td>111111</td>
+				<td>121212</td>
+				<td>131313</td>
+				<td>141414</td>
+				<td>151515</td>
+				<td>161616</td>
+				<td>171717</td>
+				<td>181818</td>
+				<td>191919</td>
+				<td>202020</td>
+			</tr>
+			<tr>
+				<td class="fix-col">111111</td>
+				<td>222222</td>
+				<td>333333</td>
+				<td>444444</td>
+				<td>555555</td>
+				<td>666666</td>
+				<td>777777</td>
+				<td>888888</td>
+				<td>999999</td>
+				<td>101010</td>
+				<td>111111</td>
+				<td>121212</td>
+				<td>131313</td>
+				<td>141414</td>
+				<td>151515</td>
+				<td>161616</td>
+				<td>171717</td>
+				<td>181818</td>
+				<td>191919</td>
+				<td>202020</td>
+			</tr>
+			<tr>
+				<td class="fix-col">111111</td>
+				<td>222222</td>
+				<td>333333</td>
+				<td>444444</td>
+				<td>555555</td>
+				<td>666666</td>
+				<td>777777</td>
+				<td>888888</td>
+				<td>999999</td>
+				<td>101010</td>
+				<td>111111</td>
+				<td>121212</td>
+				<td>131313</td>
+				<td>141414</td>
+				<td>151515</td>
+				<td>161616</td>
+				<td>171717</td>
+				<td>181818</td>
+				<td>191919</td>
+				<td>202020</td>
+			</tr>
+			<tr>
+				<td class="fix-col">111111</td>
+				<td>222222</td>
+				<td>333333</td>
+				<td>444444</td>
+				<td>555555</td>
+				<td>666666</td>
+				<td>777777</td>
+				<td>888888</td>
+				<td>999999</td>
+				<td>101010</td>
+				<td>111111</td>
+				<td>121212</td>
+				<td>131313</td>
+				<td>141414</td>
+				<td>151515</td>
+				<td>161616</td>
+				<td>171717</td>
+				<td>181818</td>
+				<td>191919</td>
+				<td>202020</td>
+			</tr>
+			<tr>
+				<td class="fix-col">111111</td>
+				<td>222222</td>
+				<td>333333</td>
+				<td>444444</td>
+				<td>555555</td>
+				<td>666666</td>
+				<td>777777</td>
+				<td>888888</td>
+				<td>999999</td>
+				<td>101010</td>
+				<td>111111</td>
+				<td>121212</td>
+				<td>131313</td>
+				<td>141414</td>
+				<td>151515</td>
+				<td>161616</td>
+				<td>171717</td>
+				<td>181818</td>
+				<td>191919</td>
+				<td>202020</td>
+			</tr>
+			<tr>
+				<td class="fix-col">111111</td>
+				<td>222222</td>
+				<td>333333</td>
+				<td>444444</td>
+				<td>555555</td>
+				<td>666666</td>
+				<td>777777</td>
+				<td>888888</td>
+				<td>999999</td>
+				<td>101010</td>
+				<td>111111</td>
+				<td>121212</td>
+				<td>131313</td>
+				<td>141414</td>
+				<td>151515</td>
+				<td>161616</td>
+				<td>171717</td>
+				<td>181818</td>
+				<td>191919</td>
+				<td>202020</td>
+			</tr>
+			<tr>
+				<td class="fix-col">111111</td>
+				<td>222222</td>
+				<td>333333</td>
+				<td>444444</td>
+				<td>555555</td>
+				<td>666666</td>
+				<td>777777</td>
+				<td>888888</td>
+				<td>999999</td>
+				<td>101010</td>
+				<td>111111</td>
+				<td>121212</td>
+				<td>131313</td>
+				<td>141414</td>
+				<td>151515</td>
+				<td>161616</td>
+				<td>171717</td>
+				<td>181818</td>
+				<td>191919</td>
+				<td>202020</td>
+			</tr>
+			<tr>
+				<td class="fix-col">111111</td>
+				<td>222222</td>
+				<td>333333</td>
+				<td>444444</td>
+				<td>555555</td>
+				<td>666666</td>
+				<td>777777</td>
+				<td>888888</td>
+				<td>999999</td>
+				<td>101010</td>
+				<td>111111</td>
+				<td>121212</td>
+				<td>131313</td>
+				<td>141414</td>
+				<td>151515</td>
+				<td>161616</td>
+				<td>171717</td>
+				<td>181818</td>
+				<td>191919</td>
+				<td>202020</td>
+			</tr>
+			<tr>
+				<td class="fix-col">111111</td>
+				<td>222222</td>
+				<td>333333</td>
+				<td>444444</td>
+				<td>555555</td>
+				<td>666666</td>
+				<td>777777</td>
+				<td>888888</td>
+				<td>999999</td>
+				<td>101010</td>
+				<td>111111</td>
+				<td>121212</td>
+				<td>131313</td>
+				<td>141414</td>
+				<td>151515</td>
+				<td>161616</td>
+				<td>171717</td>
+				<td>181818</td>
+				<td>191919</td>
+				<td>202020</td>
+			</tr>
+			<tr>
+				<td class="fix-col">111111</td>
+				<td>222222</td>
+				<td>333333</td>
+				<td>444444</td>
+				<td>555555</td>
+				<td>666666</td>
+				<td>777777</td>
+				<td>888888</td>
+				<td>999999</td>
+				<td>101010</td>
+				<td>111111</td>
+				<td>121212</td>
+				<td>131313</td>
+				<td>141414</td>
+				<td>151515</td>
+				<td>161616</td>
+				<td>171717</td>
+				<td>181818</td>
+				<td>191919</td>
+				<td>202020</td>
+			</tr>
+			<tr>
+				<td class="fix-col">111111</td>
+				<td>222222</td>
+				<td>333333</td>
+				<td>444444</td>
+				<td>555555</td>
+				<td>666666</td>
+				<td>777777</td>
+				<td>888888</td>
+				<td>999999</td>
+				<td>101010</td>
+				<td>111111</td>
+				<td>121212</td>
+				<td>131313</td>
+				<td>141414</td>
+				<td>151515</td>
+				<td>161616</td>
+				<td>171717</td>
+				<td>181818</td>
+				<td>191919</td>
+				<td>202020</td>
+			</tr>
+			<tr>
+				<td class="fix-col">111111</td>
+				<td>222222</td>
+				<td>333333</td>
+				<td>444444</td>
+				<td>555555</td>
+				<td>666666</td>
+				<td>777777</td>
+				<td>888888</td>
+				<td>999999</td>
+				<td>101010</td>
+				<td>111111</td>
+				<td>121212</td>
+				<td>131313</td>
+				<td>141414</td>
+				<td>151515</td>
+				<td>161616</td>
+				<td>171717</td>
+				<td>181818</td>
+				<td>191919</td>
+				<td>202020</td>
+			</tr>
+			<tr>
+				<td class="fix-col">111111</td>
+				<td>222222</td>
+				<td>333333</td>
+				<td>444444</td>
+				<td>555555</td>
+				<td>666666</td>
+				<td>777777</td>
+				<td>888888</td>
+				<td>999999</td>
+				<td>101010</td>
+				<td>111111</td>
+				<td>121212</td>
+				<td>131313</td>
+				<td>141414</td>
+				<td>151515</td>
+				<td>161616</td>
+				<td>171717</td>
+				<td>181818</td>
+				<td>191919</td>
+				<td>202020</td>
+			</tr>
+			<tr>
+				<td class="fix-col">111111</td>
+				<td>222222</td>
+				<td>333333</td>
+				<td>444444</td>
+				<td>555555</td>
+				<td>666666</td>
+				<td>777777</td>
+				<td>888888</td>
+				<td>999999</td>
+				<td>101010</td>
+				<td>111111</td>
+				<td>121212</td>
+				<td>131313</td>
+				<td>141414</td>
+				<td>151515</td>
+				<td>161616</td>
+				<td>171717</td>
+				<td>181818</td>
+				<td>191919</td>
+				<td>202020</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<!-- E: fix table wrap -->
+
+
+<!-- S: script -->
+
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+	$(function(){
+		//scroll table
+        $(".fix-table-wrap").scroll(function(e){
+            e.preventDefault();
+            var top = $(this).scrollTop(),
+                left = $(this).scrollLeft();
+                //console.log(top,left);
+            $(".fix-hd").css({"top":top});
+            $(".fix-col").css({"left":left});
+        });
+
+	});
+</script>
+
+<!-- E: script -->
+</body>
+</html>
